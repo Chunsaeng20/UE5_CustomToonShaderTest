@@ -13,14 +13,13 @@
     - 레포지토리를 clone하고 싶다면 fork한 후 clone하는 것을 권장한다.
     - 자세한 내용은 [이곳](https://www.unrealengine.com/ko/ue-on-github)을 참조한다.
 
-2. 레포지토리의 파일을 소스코드가 들어있는 폴더에 붙여넣기한다.
-
-3. 언리얼 엔진 5를 빌드한다.
-
+2. 언리얼 엔진 5를 빌드한다.
     - Setup.bat을 실행한다.
     - GenerateProjectFiles.bat을 실행한다.
     - UE4.sln을 Visual Studio로 로드하여 UE4를 타깃으로 Build한다.
     - 자세한 내용은 [이곳](https://docs.unrealengine.com/5.3/ko/downloading-unreal-engine-source-code/)을 참조한다.
+
+3. 레포지토리의 파일을 소스코드가 들어있는 폴더에 붙여넣기한다.
 
 4. [언리얼 디퍼드 렌더를 이용한 툰 렌더링 제작기](https://epiclounge.co.kr/contents/replay_view.php?idx=1270)를 참고하여 커스텀 셰이더를 제작한다.
 
@@ -51,12 +50,9 @@ Pull request는 받지 않는다.
 본 레포지토리는 언리얼 엔진 5.3.1을 기반으로 만들어졌다.
 
 추가적인 정보를 얻고싶다면 다음을 둘러볼 것을 권장한다.
-
-- [official documentation](https://docs.unrealengine.com)
+- [Official Documentation](https://docs.unrealengine.com)
 - [Programming and Scripting in Unreal Engine](https://docs.unrealengine.com/unreal-engine-programming-and-scripting)
 - [Development Setup](https://docs.unrealengine.com/setting-up-your-development-environment-for-cplusplus-in-unreal-engine/)
 - [Working with the GitHub source code distribution](https://docs.unrealengine.com/downloading-unreal-engine-source-code)
 - [Unreal Engine C++ API Reference](https://docs.unrealengine.com/API)
-- [Discussion](https://forums.unrealengine.com/latest?exclude_tag=question)
-- [Q&A](https://forums.unrealengine.com/tag/question)
-- [Epic Games Dev Community](https://dev.epicgames.com/community/)
+- [Discussion](https://forums.unrealengine.com/latest?exclude_tag=question) / [Q&A](https://forums.unrealengine.com/tag/question) / [Epic Games Dev Community](https://dev.epicgames.com/community/)

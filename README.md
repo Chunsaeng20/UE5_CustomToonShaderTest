@@ -47,7 +47,7 @@ Pull request는 받지 않는다.
 
 ## Additional Notes
 
-본 레포지토리는 언리얼 엔진 5.3.1을 기반으로 만들어졌다.
+본 레포지토리는 언리얼 엔진 5.3.2을 기반으로 만들어졌다.
 
 추가적인 정보를 얻고싶다면 다음을 둘러볼 것을 권장한다.
 - [Official Documentation](https://docs.unrealengine.com)

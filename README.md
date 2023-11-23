@@ -16,7 +16,7 @@
 2. 언리얼 엔진 5를 빌드한다.
     - Setup.bat을 실행한다.
     - GenerateProjectFiles.bat을 실행한다.
-    - UE4.sln을 Visual Studio로 로드하여 UE4를 타깃으로 Build한다.
+    - UE5.sln을 Visual Studio로 로드하여 UE5를 타깃으로 Build한다.
     - 자세한 내용은 [이곳](https://docs.unrealengine.com/5.3/ko/downloading-unreal-engine-source-code/)을 참조한다.
 
 3. 레포지토리의 파일을 소스코드가 들어있는 폴더에 붙여넣기한다.

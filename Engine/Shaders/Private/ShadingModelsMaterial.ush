@@ -45,6 +45,24 @@ void SetGBufferForShadingModel(
 		GBuffer.CustomData.a = Opacity;
 	}
 #endif
+	
+//-------------------------------------------------------------------------------
+#if MATERIAL_SHADINGMODEL_ANI_TOON
+	else if (ShadingModel == SHADINGMODELID_ANI_TOON)
+	{
+		GBuffer.CustomData.rgb = EncodeSubsurfaceColor(SubsurfaceColor);
+		GBuffer.CustomData.a = Opacity;
+	}
+#endif
+#if MATERIAL_SHADINGMODEL_ANI_TOON_UNLIT
+	else if (ShadingModel == SHADINGMODELID_ANI_TOON_UNLIT)
+	{
+		GBuffer.CustomData.rgb = EncodeSubsurfaceColor(SubsurfaceColor);
+		GBuffer.CustomData.a = Opacity;
+	}
+#endif	
+//-------------------------------------------------------------------------------
+	
 #if MATERIAL_SHADINGMODEL_PREINTEGRATED_SKIN
 	else if (ShadingModel == SHADINGMODELID_PREINTEGRATED_SKIN)
 	{

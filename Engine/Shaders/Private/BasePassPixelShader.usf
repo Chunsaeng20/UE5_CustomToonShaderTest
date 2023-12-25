@@ -899,8 +899,25 @@ void FPixelShaderInOut_MainPS(
 
 		SubsurfaceProfile = SubsurfaceData.a;
 	}
-#endif
+#endif	
 #endif // !STRATA_ENABLED
+	
+//-----------------------------------------------------------------------------------------------------	
+#if MATERIAL_SHADINGMODEL_ANI_TOON || MATERIAL_SHADINGMODEL_ANI_TOON_UNLIT
+	float4 SubsurfaceData = GetMaterialSubsurfaceData(PixelMaterialInputs);
+	
+	if (ShadingModel == SHADINGMODELID_ANI_TOON)
+	{
+	   	SubsurfaceColor = SubsurfaceData.rgb;
+		SubsurfaceProfile = SubsurfaceData.a;
+	}
+	else if (ShadingModel == SHADINGMODELID_ANI_TOON_UNLIT)
+	{
+	   	SubsurfaceColor = SubsurfaceData.rgb;
+		SubsurfaceProfile = SubsurfaceData.a;
+	}
+#endif
+//-----------------------------------------------------------------------------------------------------
 
 #if STRATA_ENABLED && !STRATA_OPTIMIZED_UNLIT
 	// Initialise a Strata header with normal in registers
@@ -1417,8 +1434,7 @@ void FPixelShaderInOut_MainPS(
 
 #if !MATERIAL_SHADINGMODEL_THIN_TRANSLUCENT
 	Color += Emissive;
-#endif
-
+#endif	
 #endif // !STRATA_ENABLED
 
 #if MATERIAL_SHADINGMODEL_SINGLELAYERWATER || STRATA_INLINE_SINGLELAYERWATER
@@ -1467,6 +1483,12 @@ void FPixelShaderInOut_MainPS(
 #endif
 	}
 #endif // MATERIAL_SHADINGMODEL_SINGLELAYERWATER
+	
+//----------------------------------------------------------------------------
+#if MATERIAL_SHADINGMODEL_ANI_TOON || MATERIAL_SHADINGMODEL_ANI_TOON_UNLIT
+	Color = BaseColor;
+#endif	
+//----------------------------------------------------------------------------
 
 #if MATERIAL_SHADINGMODEL_THIN_TRANSLUCENT && !STRATA_ENABLED
 	{

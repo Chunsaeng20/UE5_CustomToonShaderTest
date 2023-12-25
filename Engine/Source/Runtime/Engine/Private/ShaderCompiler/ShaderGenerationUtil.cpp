@@ -142,6 +142,11 @@ void FShaderCompileUtilities::ApplyFetchEnvironment(FShaderMaterialPropertyDefin
 	FETCH_COMPILE_BOOL(MATERIAL_SHADINGMODEL_SINGLELAYERWATER);
 	FETCH_COMPILE_BOOL(MATERIAL_SHADINGMODEL_THIN_TRANSLUCENT);
 
+	//------------------------------------------------------------------
+	FETCH_COMPILE_BOOL(MATERIAL_SHADINGMODEL_ANI_TOON);
+	FETCH_COMPILE_BOOL(MATERIAL_SHADINGMODEL_ANI_TOON_UNLIT);
+	//------------------------------------------------------------------
+
 	FETCH_COMPILE_BOOL(SINGLE_LAYER_WATER_SEPARATED_MAIN_LIGHT);
 
 	FETCH_COMPILE_BOOL(MATERIAL_FULLY_ROUGH);
@@ -1676,6 +1681,34 @@ static void SetSlotsForShadingModelType(bool Slots[], EMaterialShadingModel Shad
 	case MSM_ThinTranslucent:
 		// thin translucent doesn't write to the GBuffer
 		break;
+
+	//--------------------------------------------------------
+	case MSM_AniToon:
+		SetSharedGBufferSlots(Slots);
+		if (bMergeCustom)
+		{
+			Slots[GBS_CustomData] = true;
+		}
+		else
+		{
+			Slots[GBS_SubsurfaceColor] = true;
+			Slots[GBS_Opacity] = true;
+		}
+		break;
+	case MSM_AniToonUnlit:
+		SetSharedGBufferSlots(Slots);
+		if (bMergeCustom)
+		{
+			Slots[GBS_CustomData] = true;
+		}
+		else
+		{
+			Slots[GBS_SubsurfaceColor] = true;
+			Slots[GBS_Opacity] = true;
+		}
+		break;
+	//--------------------------------------------------------
+
 	}
 }
 

@@ -267,6 +267,14 @@ namespace PixelInspector
 			return EMaterialShadingModel::MSM_ThinTranslucent;
 		case PIXEL_INSPECTOR_SHADINGMODELID_STRATA:
 			return EMaterialShadingModel::MSM_Strata;
+
+		//---------------------------------------------------------
+		case PIXEL_INSPECTOR_SHADINGMODELID_ANI_TOON:
+			return EMaterialShadingModel::MSM_AniToon;
+		case PIXEL_INSPECTOR_SHADINGMODELID_ANI_TOON_UNLIT:
+			return EMaterialShadingModel::MSM_AniToonUnlit;
+		//---------------------------------------------------------
+
 		};
 		return EMaterialShadingModel::MSM_DefaultLit;
 	}
@@ -361,6 +369,17 @@ namespace PixelInspector
 			IrisDistance = InCustomData.W;
 		}
 		break;
+
+		//---------------------------------------------------------------------------------
+		case EMaterialShadingModel::MSM_AniToon:
+		case EMaterialShadingModel::MSM_AniToonUnlit:
+		{
+			SubSurfaceColor = FVector3f(InCustomData.X, InCustomData.Y, InCustomData.Z);
+			Opacity = InCustomData.W;
+		}
+		break;
+		//---------------------------------------------------------------------------------
+
 		};
 	}
 };

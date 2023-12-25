@@ -25,6 +25,12 @@ class FFloat16Color;
 #define PIXEL_INSPECTOR_SHADINGMODELID_SINGLELAYERWATER 10
 #define PIXEL_INSPECTOR_SHADINGMODELID_THIN_TRANSLUCENT 11
 #define PIXEL_INSPECTOR_SHADINGMODELID_STRATA 12
+
+//------------------------------------------------------------
+#define PIXEL_INSPECTOR_SHADINGMODELID_ANI_TOON 13
+#define PIXEL_INSPECTOR_SHADINGMODELID_ANI_TOON_UNLIT 14
+//------------------------------------------------------------
+
 #define PIXEL_INSPECTOR_SHADINGMODELID_MASK 0xF
 
 namespace PixelInspector

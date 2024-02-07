@@ -9,22 +9,25 @@
     - 에픽게임즈 계정과 GitHub 계정이 필요하다.
     - [UnrealEngine.com](https://www.unrealengine.com/ko)에 로그인하여 '계정'에서 GitHub 계정과 연동한다.
     - GitHub에 등록된 이메일로 전송된 @EpicGames 초대 이메일을 수락한다.
-    - 언리얼 엔진 5 레포지토리를 Clone하거나 zip파일을 다운로드한다.
-    - 레포지토리를 clone하고 싶다면 Fork한 후 Clone하는 것을 권장한다.
+    - 언리얼 엔진 5 레포지토리를 Clone하거나 Releases에서 원하는 버전의 zip파일을 다운로드한다.
+    - 레포지토리를 Clone하고 싶다면 언리얼 엔진 5 레포지토리를 Fork한 후 Clone하는 것을 권장한다.
     - 자세한 내용은 [이곳](https://www.unrealengine.com/ko/ue-on-github)을 참조한다.
 
 2. 언리얼 엔진 5를 빌드한다.
     - Setup.bat을 관리자 권한으로 실행한다.
-    - GenerateProjectFiles.bat을 실행한다.
-    - UE5.sln을 Visual Studio로 로드하여 UE5를 타깃으로 Build한다.
+    - GenerateProjectFiles.bat을 관리자 권한으로 실행한다.
+    - UE5.sln을 Visual Studio로 로드한다.
+    - Engine폴더의 UE5를 타깃으로 Build한다.
+    - Build전 솔루션 환경은 Development Editor, 솔루션 플랫폼은 Win64로 설정되어 있는지 확인한다.
     - 자세한 내용은 [이곳](https://docs.unrealengine.com/5.3/ko/downloading-unreal-engine-source-code/)을 참조한다.
 
 3. 레포지토리의 파일을 소스코드가 들어있는 폴더에 붙여넣기한다.
-    - UE5.sln을 Visual Studio로 로드하여 UE5를 타깃으로 다시 Build한다.
+    - UE5.sln을 Visual Studio로 로드한다.
+    - Engine폴더의 UE5를 타깃으로 다시 Build한다.
 
 4. 언리얼 엔진을 실행한다.
-    - UE5를 시작프로젝트로 설정한다.
-    - UE5 프로젝트의 새로운 인스턴스를 생성한다. 혹은 F5키를 눌러 실행한다.
+    - Engine폴더의 UE5를 시작프로젝트로 설정한다.
+    - UE5를 우클릭하여 프로젝트의 새로운 인스턴스를 생성한다. 혹은 F5키를 눌러 실행한다.
 
 ## Troubleshooting
 
